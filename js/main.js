@@ -1,6 +1,5 @@
 'use strict'
 
-var prezzoDiscount;
 
 function myFunctionPriceGen() {
 
@@ -20,20 +19,29 @@ console.log(etaUtente);
 let prezzoIntero = (numeroKM * costoKM);
 console.log(prezzoIntero);
 
+// 5. definizione variabili con sconto
+let prezzoScontato1 = parseInt(prezzoIntero - (prezzoIntero * 0.2));
+let prezzoScontato2 = parseInt(prezzoIntero - (prezzoIntero * 0.4));
 
-/*5. SE etaUtente ≤ 18 mostra prezzo - 20% in forma umana 
+/*6. SE etaUtente < 18 mostra prezzo - 20% in forma umana 
    altrimenti SE etaUtente ≥ 65 mostra prezzo - 40% in forma umana
    altrimenti mostra prezzo in forma umana*/
 if (etaUtente < 18) {
-  prezzoScontato = prezzo - 20, 'hai diritto ad uno sconto del 20%';
+  prezzoScontato1;
+  console.log(prezzoScontato1);
+  alert ('Sei minorenne e hai diritto ad uno sconto del 20%');
+  document.getElementById("prezzofinale").innerHTML =
+`Il tuo biglietto costa: ${prezzoScontato1} €`;
 } else if (etaUtente >= 65) {
-    prezzoScontato = prezzo - 40, 'hai diritto ad uno sconto del 40%';
-} else 'prezzo pieno'
-
-//6. scrittura del prezzo nel file HTML
-document.getElementById("prezzofinale").innerHTML =
-`Il tuo biglietto costa: ${prezzoIntero} €`;
-//7. step: stampa nella console del prezzo
-console.log (prezzoIntero);
-
+    prezzoScontato2;
+    console.log(prezzoScontato2)
+    alert ('Sei over 65 e hai diritto ad uno sconto del 40%');
+    document.getElementById("prezzofinale").innerHTML =
+    `Il tuo biglietto costa: ${prezzoScontato2} €`;
+} else {
+    prezzoIntero;
+    alert ('Paghi il prezzo pieno');
+    document.getElementById("prezzofinale").innerHTML =
+    `Il tuo biglietto costa: ${prezzoIntero} €`;
+}
 }

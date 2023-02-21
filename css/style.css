@@ -2,7 +2,8 @@
 body {
     text-align: center;
     margin-bottom: .625rem;
-    font-family:'Arial Narrow Bold', sans-serif
+    font-family:'Arial Narrow Bold', sans-serif;
+    background-color: lightskyblue;
 }
 
 button {

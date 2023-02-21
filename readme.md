@@ -13,6 +13,9 @@ Ricordate: il primo push dovrà essere un file README.md (potete scrivere testo 
 2. imposta variabile numeroKM con prompt (quanti chilometri vuoi percorrere?) e tipo output numero
 3. imposta variabile etaUtente (quanti anni hai? con prompt e tipo output numero
 4. calcola prezzo (numeroKM * costoKM)
-5. SE etaUtente ≤ 18 mostra prezzo - 20% in forma umana 
+5. definizione variabili con sconto
+   prezzoScontato1 sconto del 20% per under 18
+   prezzoScontato2 sconto del 40% per over 65
+6. SE etaUtente ≤ 18 mostra prezzo - 20% in forma umana 
    altrimenti SE etaUtente ≥ 65 mostra prezzo - 40% in forma umana
    altrimenti mostra prezzo in forma umana
